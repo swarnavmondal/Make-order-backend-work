@@ -1,0 +1,96 @@
+@server = http://localhost:8820
+
+
+//<----- Website Owner EndPoints------------>
+
+
+### Owner Account Registration Route
+POST {{server}}/owner/register
+Content-Type: application/json
+
+{
+   "email": "12@gmail.com",
+   "password":"12345vvvv"
+   
+}
+
+
+### Owner Account Login Route
+POST {{server}}/owner/login
+Content-Type: application/json
+
+{
+   "email": "12@gmail.com",
+   "password":"12345vvvv"
+   
+}
+
+
+### Add Products Route
+### Create
+POST {{server}}/product
+Content-Type: application/json
+
+{
+   "productName": "hat",
+   "productPrice":"60"
+}
+
+
+### View All Orders Route
+GET {{server}}/order
+Content-Type: application/json
+
+
+//<-------------------END ----------------------->
+
+
+
+//<----- Customers EndPoints ------------>
+
+### Customer Account Registration Route
+POST {{server}}/client/register
+Content-Type: application/json
+
+{
+   "email": "rpk@gmail.com",
+   "password":"12345vvvv"
+   
+}
+
+### Customer Account Login Route
+
+POST {{server}}/client/login
+Content-Type: application/json
+
+{
+   "email": "r1t@gmail.com",
+   "password":"12345vvvv"
+   
+}
+
+### Browse All Products Route
+GET {{server}}/product
+Content-Type: application/json
+
+
+### Browse Particular Product By Product Id
+GET {{server}}/product/60f59422c624a403503df6cc
+Content-Type: application/json
+
+
+### Make Orders
+POST {{server}}/order
+Content-Type: application/json
+
+{
+  "clientId": "60f59474c624a403503df6d5",
+  "productName": "owl",
+  "productPrice": "100"
+}
+
+### Single Order View By Client Id
+
+GET {{server}}/order/60f59474c624a403503df6d5
+Content-Type: application/json
+
